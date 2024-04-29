@@ -95,7 +95,7 @@ server <- function(id) {
       waiter$waiter_hide()
       x
     }) |>
-      bindCache(input$year)
+      bindCache(input$year, cache="session")
 
     rv_activity_filter <- reactive({
       req(df <- rv_activity())
